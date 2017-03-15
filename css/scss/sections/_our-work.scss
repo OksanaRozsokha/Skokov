@@ -1,0 +1,95 @@
+.our-work {
+  padding-bottom: 85px;
+  overflow: hidden;
+}
+.pretty-header {
+  margin-bottom: 45px;
+  text-align: center;
+  .bg-title {
+    display: inline-block;
+    background: $grey;
+    max-width: 160px;
+    padding: 5px 25px;
+    overflow: hidden;
+  }
+  h2 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: $yellow;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 60%;
+      display: inline-block;
+      height: 1px;
+      width: 50%;
+      background: #cacaca;
+      @media (min-width: 480px) and (max-width: 991px) {
+        left: 72%;
+      }
+      @include respond-to(handhelds) {
+        left: 80%;
+      }
+      @media (max-width: 340px) {
+        left: 85%;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 60%;
+      display: inline-block;
+      height: 1px;
+      width: 50%;
+      background: #cacaca;
+      @media (min-width: 480px) and (max-width: 991px) {
+        right: 72%;
+      }
+      @include respond-to(handhelds) {
+        right: 80%;
+      }
+      @media (max-width: 340px) {
+        right: 85%;
+      }
+    }
+  }
+  p {
+    font-size: 16px;
+  }
+}
+.bg-title {
+
+}
+.portfolio-list {
+  width: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.grid {
+  margin: 0 auto;
+  @include respond-to(handhelds) {
+    position: static;
+  }
+}
+.grid-item {
+  width: 200px;
+  padding-right: 5px;
+  @include respond-to(handhelds) {
+    position: static;
+  }
+}
+
+.grid-item--width2 {
+  width: 400px;
+  @include respond-to(handhelds) {
+    position: static;
+    width: 100%;
+  }
+}

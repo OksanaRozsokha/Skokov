@@ -1,0 +1,23 @@
+html, body{
+  overflow-x: hidden;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+body {
+  padding: 10px;
+  @include century-gothic(24px);
+}
+section {
+  background: $grey-bg;
+}
+header {
+  @extend section;
+}
+h2 {
+  @include century-gothic(18px);
+  text-transform: uppercase;
+}
+.yellow {
+  color: yellow;
+}
+

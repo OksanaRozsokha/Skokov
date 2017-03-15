@@ -1,0 +1,75 @@
+a {
+  @include transition-duration(0.5s);
+}
+a:hover {
+  outline: none;
+  text-decoration: none;
+}
+a:active {
+  @extend a:hover;
+}
+a:visited {
+  @extend a:hover;
+}
+a:link {
+  @extend a:hover;
+}
+button {
+  display: block;
+  border: none;
+  cursor: pointer;
+}
+.padding-btn {
+  padding: 25px 10px;
+}
+.padding-rtl {
+  padding: 10px 25px;
+  @media (max-width: 860px) {
+    padding: 15px 15px;
+  }
+}
+.black-btn {
+  background: $black;
+}
+.text-btn {
+  color:white;
+}
+.border-btn {
+  border-bottom: 2px solid $yellow;
+  @include transition-duration(0.5s);
+}
+.hover-colors:hover {
+  background: yellow;
+  color: $black;
+  border-color: $black;
+}
+
+.hover-yellow:hover {
+  background: $yellow;
+  @include transition-duration(0.5s);
+}
+.hvr-skew {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-skew:hover, .hvr-skew:focus, .hvr-skew:active {
+  -webkit-transform: skew(-10deg);
+  transform: skew(-10deg);
+}
+a{
+  &.size-btn {
+    @media (max-width: 964px) {
+      font-size: 16px;
+    }
+    @include respond-to(handhelds) {
+      font-size: 12px;
+    }
+  }
+}

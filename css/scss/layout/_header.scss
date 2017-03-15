@@ -1,0 +1,50 @@
+
+.main-header {
+  padding: 25px 0;
+}
+h1 {
+  text-indent:  -9999px;
+  margin-top: -35px;
+}
+.flex-header {
+  @include display-flex;
+  @include justify-content(space-between);
+  @include align-items(center);
+}
+.main-nav {
+  width: 60%;
+}
+.menu-list {
+  width: 100%;
+  @include display-flex;
+  @include justify-content(space-between);
+  li {
+    @include code-font(16px);
+  }
+  a {
+    color: $black;
+    text-transform: uppercase;
+  }
+}
+.main-header {
+  .menu-list {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+.menu {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+    width: 25px;
+    height: 15px;
+    padding: 20px;
+    @include small-bg("../img/menu-burger.png");
+    background-color: rgba(0,0,0, 0.5);
+    text-indent: -9999px;
+    float: right;
+    outline: none;
+   @include border-radius(5px);
+  }
+}

@@ -1,0 +1,19 @@
+.our-clients {
+  padding-bottom: 115px;
+  overflow: hidden;
+  .slick-prev {
+    &:before {
+      height: 65px;
+    }
+  }
+  .slick-next {
+    &:before {
+      height: 65px;
+    }
+  }
+}
+.clients-list {
+  li {
+    margin: 50px 10px 0;
+  }
+}

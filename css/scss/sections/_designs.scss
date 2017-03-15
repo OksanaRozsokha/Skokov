@@ -1,0 +1,132 @@
+.designs {
+  padding: 90px 0;
+}
+.header-wrap {
+  text-align: center;
+  margin-bottom: 60px;
+  h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+}
+.designs-list {
+  li {
+    margin-bottom: 30px;
+    &:hover {
+      .hover-block {
+        display: none;
+      }
+      .square {
+        display: block;
+      }
+      .hover-words {
+        visibility: visible;
+      }
+      .text-block {
+        padding: 0 10px 30px;
+        p {
+          text-transform: uppercase;
+         @include  code-font(20px);
+        }
+      }
+    }
+    @include respond-to(wide-handhelds) {
+      padding: 0 25% 0 25%;
+    }
+    @media (min-width: 370px)and(max-width: 478px) {
+      padding: 0 15% 0 15%;
+    }
+  }
+  .text-block {
+    padding: 0 30px 30px;
+    background: $grey;
+    text-align: center;
+    @include century-gothic(13px);
+    color: $white;
+    p {
+      font-size: 18px;
+    }
+    .hover-words {
+      font-size: 10px;
+      margin-top: 10px;
+      float: right;
+      visibility: hidden;
+    }
+  }
+  .img-wrap {
+    position: relative;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .hover-block {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include transition-duration(0.5s);
+
+  }
+  .hover-align {
+    background: $yellow;
+    height: 100%;
+    padding: 10px;
+    @include transition-duration(0.5s);
+    @include display-flex;
+    @include justify-content(center);
+    @include align-items(flex-end);
+    span {
+      @include code-font(20px);
+      text-transform: uppercase;
+    }
+  }
+}
+.web-design-icon:before {
+  content: "";
+  width: 110px;
+  height: 90px;
+  display: block;
+  margin: 0 auto 30px;
+  @include small-bg("../img/web-design-icon.png");
+}
+.web-development-icon:before {
+  content: "";
+  width: 110px;
+  height: 95px;
+  display: block;
+  margin: 0 auto 30px;
+  @include small-bg("../img/web-development-icon.png");
+}
+.graphic-design-icon:before {
+  content: "";
+  width: 90px;
+  height: 110px;
+  display: block;
+  margin: 0 auto 30px;
+  @include small-bg("../img/graphic-design-icon.png");
+}
+.triangle {
+  position: relative;
+  height: 20px;
+  @include display-flex;
+  @include justify-content(flex-end);
+}
+.square {
+  position: absolute;
+  bottom: 40%;
+  display: none;
+  width: 20px;
+  height: 20px;
+  @include rotate(45deg);
+  background: $grey;
+  text-indent: -9999px;
+  @include transition-duration(0.5s);
+
+}
+.yellow {
+  color: yellow;
+}

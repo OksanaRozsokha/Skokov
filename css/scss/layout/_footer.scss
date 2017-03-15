@@ -1,0 +1,266 @@
+.main-footer {
+  color: $white;
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+.grey-bg {
+  padding: 30px 0 0;
+  background: $grey;
+}
+.black-bg {
+  padding: 30px 0;
+  background: $black;
+}
+.left-content {
+  p {
+    margin: 30px 0;
+  }
+  a {
+    font-size: 15px;
+    padding: 10px 15px;
+    margin-bottom: 45px;
+  }
+}
+.gallery-list {
+  max-width: 405px;
+  margin: 20px 0 30px;
+  @include display-flex;
+  @include justify-content(space-between);
+  @include flex-wrap(wrap);
+  li {
+    width: 32%;
+    margin: 1.25% 1.25% 0 0;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+.tweets-list {
+  margin: 30px 0 35px;
+  li {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 15px;
+    &:hover a {
+      border-bottom: 1px solid $yellow;
+    }
+    &:before {
+      content:'';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      @include small-bg("../img/twitter-birs-icon.png")
+    }
+  }
+  a {
+    color: $white;
+    border-bottom: 1px solid transparent;
+  }
+}
+.date {
+  display: inherit;
+  color: $yellow;
+  font-size: 8px;
+}
+.social-networks-block {
+  @include display-flex;
+  margin-bottom: 30px;
+  @include respond-to(handhelds) {
+    @include flex-direction(column);
+    margin-bottom: 30px;
+  }
+  h3 {
+    margin-right: 10px;
+    font-size: 16px;
+    @include respond-to(handhelds) {
+      margin-bottom: 20px;
+    }
+  }
+}
+.social-networks-list {
+  @include display-flex;
+  li {
+    margin-left: 1px;
+    a {
+      display: block;
+      width: 30px;
+      height: 30px;
+      border: 1px solid transparent;
+      text-indent: -9999px;
+    }
+    &:hover a {
+      border: 1px solid $yellow;
+    }
+    &:nth-child(1) a {
+      @extend .icons-facebook-icon;
+    }
+    &:nth-child(2) a {
+      @extend .icons-google-plus-icon;
+    }
+    &:nth-child(3) a {
+      @extend .icons-twitter-icon;
+    }
+    &:nth-child(4) a {
+      @extend .icons-linkedin-icon;
+    }
+    &:nth-child(5) a {
+      @extend .icons-you-tube-icon;
+    }
+    &:nth-child(6) a {
+      @extend .icons-bloger-icon;
+    }
+    &:nth-child(7) a {
+      @extend .icons-rss-icon;
+    }
+    &:nth-child(8) a {
+      @extend .icons-dribbble-icon;
+    }
+  }
+}
+.contact-block {
+  margin-bottom: 30px;
+  h3 {
+    margin-bottom: 50px;
+  }
+}
+.contact-list {
+  li {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 45px;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .block {
+    display: block;
+  }
+  a {
+    color: $yellow;
+  }
+}
+.adress-icon {
+  &:before {
+    @extend .icons-adress-icon;
+  }
+}
+.telephone-icon {
+  &:before {
+    @extend .icons-phone-icon;
+  }
+}
+.email-icon {
+  &:before {
+    @extend .icons-email-icon;
+  }
+}
+.follow-us-block {
+  margin-bottom: 30px;
+  h3 {
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 40px;
+  }
+}
+form {
+  overflow: hidden;
+}
+.email-input {
+  height: 28px;
+  width: 230px;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid $yellow;
+  font-size: 13px;
+  outline: none;
+  float: left;
+  @media (max-width: 340px) {
+    width: 180px;
+  }
+}
+.form-btn {
+  height: 28px;
+  width: 28px;
+  display: inline-block;
+  @include small-bg("../img/icons/sec-email-icon.png");
+  border: 1px solid $black;
+  text-indent: -9999px;
+  @include transition-duration(0.5s);
+  outline: none;
+  &:hover {
+    border-color: $yellow;
+  }
+}
+.black-bg {
+  p {
+    margin-right: 15px;
+    @media (max-width: 767px) {
+     text-align: center;
+    }
+  }
+  a {
+    color: $white;
+  }
+  .menu-list {
+    li {
+      &:hover a {
+        color: $yellow;
+      }
+    }
+    a {
+      color: $white;
+    }
+  }
+}
+.flex-wrap {
+  @include display-flex;
+  @include justify-content(space-between);
+  @media (max-width: 1199px) {
+    @include flex-direction(column-reverse);
+    @include justify-content(center);
+    @include align-items(center);
+  }
+}
+.main-footer {
+  .main-nav {
+    @media (max-width: 1199px) {
+      padding: 5px;
+      margin-bottom: 30px;
+      border: 1px solid $yellow;
+      @include box-shadow( 0 0 15px rgba(255,235,0,0.5));
+    }
+  }
+  .menu-list {
+    @media (max-width: 767px) {
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+    }
+    li {
+      @media (max-width: 767px) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
