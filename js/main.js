@@ -12,7 +12,7 @@ $(document).ready(function () {
        $(this).children('.jq-text').find('p').text('Redesigning width personality').css('font-size','15px');
     });
     $('.designs-list li').mouseout(function () {
-        $(this).children('.jq-text').find('p').text('Lorem ipsum dolor sit amet,consectetur.'.css('font-size','20px'));
+        $(this).children('.jq-text').find('p').text('Lorem ipsum dolor sit amet,consectetur.').css('font-size','15px');
     });
 
     $('.grid').masonry ({

@@ -358,7 +358,6 @@ button {
 }
 .designs-list li:hover .text-block p {
   text-transform: uppercase;
-  font: 20px "code", serif;
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .designs-list li {
@@ -378,7 +377,7 @@ button {
   color: #fff;
 }
 .designs-list .text-block p {
-  font-size: 18px;
+  font-size: 15px;
 }
 .designs-list .text-block .hover-words {
   font-size: 10px;

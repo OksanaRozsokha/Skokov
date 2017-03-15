@@ -26,7 +26,6 @@
         padding: 0 10px 30px;
         p {
           text-transform: uppercase;
-         @include  code-font(20px);
         }
       }
     }
@@ -44,7 +43,7 @@
     @include century-gothic(13px);
     color: $white;
     p {
-      font-size: 18px;
+      font-size: 15px;
     }
     .hover-words {
       font-size: 10px;
