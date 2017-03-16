@@ -39,15 +39,29 @@ button {
   @include transition-duration(0.5s);
 }
 .hover-colors:hover {
-  background: yellow;
+  background: $yellow;
   color: $black;
   border-color: $black;
 }
 
-.hover-yellow:hover {
-  background: $yellow;
-  @include transition-duration(0.5s);
+.hover-yellow {
+  .main-header & {
+    @media (max-width: 767px) {
+      display: block;
+      color: $white;
+    }
+    &:hover {
+      @media (max-width: 767px) {
+        color: $black;
+      }
+    }
+  }
+  &:hover {
+    background: $yellow;
+    @include transition-duration(0.5s);
+  }
 }
+
 .hvr-skew {
   display: inline-block;
   vertical-align: middle;

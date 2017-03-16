@@ -95,6 +95,10 @@ h2 {
   color: yellow;
 }
 
+.active {
+  overflow: hidden;
+}
+
 .main-header {
   padding: 25px 0;
 }
@@ -135,6 +139,15 @@ h1 {
 @media (max-width: 767px) {
   .main-header .menu-list {
     display: none;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    background: rgba(0, 0, 0, 0.95);
+    text-align: center;
   }
 }
 
@@ -206,11 +219,22 @@ button {
 }
 
 .hover-colors:hover {
-  background: yellow;
+  background: #ffeb00;
   color: #000;
   border-color: #000;
 }
 
+@media (max-width: 767px) {
+  .main-header .hover-yellow {
+    display: block;
+    color: #fff;
+  }
+}
+@media (max-width: 767px) {
+  .main-header .hover-yellow:hover {
+    color: #000;
+  }
+}
 .hover-yellow:hover {
   background: #ffeb00;
   -moz-transition-duration: 0.5s;

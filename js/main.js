@@ -1,6 +1,28 @@
 
 $(document).ready(function () {
 
+    //menu on click
+    let flagMenu = true;
+
+    $('.menu-btn').on('click', function (e) {
+        e.stopPropagation();
+        if(flagMenu) {
+            flagMenu = false;
+            $('.menu-list').slideToggle(function () {
+                flagMenu = true;
+            });
+            $('body').toggleClass('active');
+        }
+    });
+    $('body').on('click', function () {
+        $('.menu-list').fadeOut();
+        $('body').removeClass()('active');
+    });
+    $('.menu-list').on('click', function (e) {
+        e.stopPropagation();
+    });
+    //
+
 
     $('.slider').slick({
         dots: true,
@@ -58,6 +80,11 @@ $(document).ready(function () {
             }
 
         ]
+    });
+
+    //outline none
+    $('button, a').on('focus', function () {
+        $(this).blur();
     });
 
 });
